@@ -17,7 +17,7 @@ NOTE: The above provides full admin access to the user. If you wish to create a 
 #### Create an EC2 Instance
 ##### Via aws-cli
 ###### Create key-pair
-aws ec2 create-key-pair --key-name my-k8-server-key --query 'KeyMaterial' --output text > my-k8-server-key.pem
+`aws ec2 create-key-pair --key-name my-k8-server-key --query 'KeyMaterial' --output text > my-k8-server-key.pem`   
 
 Update the key's permissions.
 
