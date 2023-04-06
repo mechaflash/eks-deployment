@@ -54,7 +54,7 @@ TO-DO: Below command will not work without specifying a subnet from a VPC you wi
 NOTE: Replace <AMI_ID> from the output of the previous step.
 Replace Replace <your_security_group_id> from the output of the Create Security Group step.
 
-#### Upgrading aws-cli
+#### Installing/Upgrading aws-cli
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html   
 Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).   
 NOTE: There are times when running `aws --version` shows the older version. After you perform the update, close and reconnect to the EC2 instance and re-run `aws --version`.
