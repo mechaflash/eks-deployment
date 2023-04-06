@@ -56,12 +56,12 @@ Replace Replace <your_security_group_id> from the output of the Create Security 
 
 #### Upgrading aws-cli
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html   
-Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).
+Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).   
 NOTE: There are times when running `aws --version` shows the older version. After you perform the update, close and reconnect to the EC2 instance and re-run `aws --version`.
 
 #### Installing kubectl
 https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html   
-Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).
+Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).   
 NOTE: Ensure to select the appropriate kubectl version with kubernetes cluster version you will be managing.
 
 #### Installing eksctl
