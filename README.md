@@ -6,8 +6,8 @@ You will need to have an AWS IAM user with admin privileges and CLI access, as w
 ### AWS IAM User
 
 #### Via aws-cli
-`aws iam create-user --user-name <user-name>` 
-`aws iam create-access-key --user-name <user-name>` 
+`aws iam create-user --user-name <user-name>`
+`aws iam create-access-key --user-name <user-name>`
 *NOTE: Save AccessKeyId and SecretAccessKey from the output from `aws iam create-access-key`*
 `aws iam attach-user-policy --user-name <user-name> --policy-arn arn:aws:iam::aws:policy/AdministratorAccess`
 NOTE: The above provides full admin access to the user. If you wish to create a user with more restricted access rights, you may create a custom IAM policy and attach it via the ARN, replacing the --policy-arn value above.
