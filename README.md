@@ -77,9 +77,26 @@ This will create a cloud-formation stack with a name with format `eksctl-<name>-
 This cloud formation stack will take approximately 15 minutes to deploy all necessary resources for the eks cluster.   
 NOTE: Sometimes the deployment will fail due to a lack of resources for the region you're deploying the cluster in. If this occurs, you will need to specify AZs that were not included in the error message to the eksctl command above.
 
-### Configure kubectl with your cluster.
+### Configure kubectl With Your Cluster
 Once the cloud formation stacks have 
 Run the following to connect and configure kubectl with your eks cluster:   
 `aws eks update-kubeconfig --name <CLUSTER NAME> --region <REGION>`
       
-### 
+### Setup The Service
+
+`kubectl apply -f ./<service config yaml file>`   
+Confirm the service creation by running:
+`kubectl get service`   
+
+### Setup The Deployment
+
+`kubectl apply -f ./<deployment config yaml file>`   
+Confirm the deployment has been completed:   
+`kubectl get deployment`   
+You can also check the status of the pods, replica set, and nodes via:   
+`kubectl get pod`   
+`kubectl get rs`   
+`kubectl get node`   
+
+### Test The App
+If deploying your app with a load balancer as the service, when you run `kubectl get service`, the load balancer public address will be shown. You can curl, or alternatively utilize your browser to confirm the app is being served.
