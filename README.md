@@ -69,9 +69,17 @@ https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
 Instructions on installing can be found in the above link (subject to change, so will not document exact steps here).
 
 ## Using eksctl to Deploy a Cluster
+### Create EKS Cluster
 From either your computer or the EC2 you've setup to deploy the cluster from, you can use eksctl to perform a cluster deployment. Below is an example command:   
 `eksctl create cluster --name dev --region us-east-1 --nodegroup-name standard-workers --node-type t3.medium --nodes-min 1 --nodes-max 4 --managed`   
 NOTE: Replace the fields accordingly with your own values.   
 This will create a cloud-formation stack with a name with format `eksctl-<name>-cluster`   
 This cloud formation stack will take approximately 15 minutes to deploy all necessary resources for the eks cluster.   
 NOTE: Sometimes the deployment will fail due to a lack of resources for the region you're deploying the cluster in. If this occurs, you will need to specify AZs that were not included in the error message to the eksctl command above.
+
+### Configure kubectl with your cluster.
+Once the cloud formation stacks have 
+Run the following to connect and configure kubectl with your eks cluster:   
+`aws eks update-kubeconfig --name <CLUSTER NAME> --region <REGION>`
+      
+### 
