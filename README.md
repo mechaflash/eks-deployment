@@ -1,5 +1,8 @@
 # EKS-deployment
 
+## Description
+This document provides a process to generate all the required pre-requisite resources via AWS CLI and the EKS resources via EKSCTL and KUBECTL.
+
 ## Pre-Requisites
 You will need to have an AWS IAM user with admin privileges and CLI access, as well as aws-cli, kubectl, and eksctl installed on either your local machine or an EC2 instance to run the appropriate commands to perform an EKS cluster deployment using the methods to follow. eksctl makes it very easy to create and manage eks clusters, creating the cloudformation stack and all necessary resources for your cluster within a single command.
 
